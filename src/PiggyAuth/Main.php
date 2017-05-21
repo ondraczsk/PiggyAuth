@@ -850,8 +850,7 @@ class Main extends PluginBase
      */
     public function hashPassword($password)
     {
-        $options = ['cost' => $this->getConfig()->getNested("hash.cost")];
-        return password_hash($password, PASSWORD_BCRYPT, $options);
+       md5($password);
     }
 
     /**
